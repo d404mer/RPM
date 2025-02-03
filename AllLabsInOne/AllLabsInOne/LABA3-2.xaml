@@ -1,0 +1,50 @@
+﻿<Window x:Class="AllLabsInOne.LABA3_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllLabsInOne"
+        mc:Ignorable="d"
+        Title="LABA3_2" Height="450" Width="800"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <InkCanvas x:Name="inkCanvas" Margin="10,47,10,10"/>
+
+        <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Top">
+
+            <Label Content="Цвет:" VerticalAlignment="Center"/>
+
+            <ComboBox x:Name="colorComboBox" SelectedIndex="0" Margin="10">
+
+                <ComboBoxItem Content="Чёрный" Tag="Black"/>
+
+                <ComboBoxItem Content="Красный" Tag="Red"/>
+
+                <ComboBoxItem Content="Зелёный" Tag="Green"/>
+
+                <ComboBoxItem Content="Синий" Tag="Blue"/>
+
+            </ComboBox>
+
+            <Label Content="Размер пера:" VerticalAlignment="Center"/>
+
+            <Slider x:Name="sizeSlider" Width="100" Minimum="1" Maximum="50" Value="10" Margin="5" VerticalAlignment="Center" />
+
+            <Label Content="Режим:" VerticalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+
+                <RadioButton x:Name="drawRadioButton" Content="Draw" GroupName="Mode" IsChecked="True" Margin="5"/>
+
+                <RadioButton x:Name="editRadioButton" Content="Edit" GroupName="Mode" Margin="5"/>
+
+                <RadioButton x:Name="deleteRadioButton" Content="Delete by Point" GroupName="Mode" Margin="5" />
+
+                <RadioButton x:Name="deletemodelRadioButton" Content="Delete Figure" GroupName="Mode" Checked="deletemodelRadioButton_Checked" Margin="5" />
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

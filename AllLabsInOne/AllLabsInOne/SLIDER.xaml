@@ -1,0 +1,26 @@
+﻿<Window x:Class="AllLabsInOne.SLIDER"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllLabsInOne"
+        mc:Ignorable="d"
+        Title="SLIDER" Height="450" Width="800"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <StackPanel>
+            <Label Content="Текстовый блок 1:" />
+            <TextBox x:Name="t1" Text="{Binding ElementName=t2, Path=Text}"/>
+            <Label Content="Текстовый блок 2:" />
+            <TextBox x:Name="t2" Text="{Binding ElementName=t1, Path=Text}" />
+            <Label Content="Изменение размера шрифта, блок 1:" />
+            <Slider x:Name="slider1" Value="{Binding ElementName=t1, Path=FontSize, Mode=TwoWay}" Minimum="1"/>
+            <Label Content="Слайдер, повторяющий действия" />
+            <Slider x:Name="slider2" Value="{Binding ElementName=slider1, Path=Value}" Minimum="1"/>
+            <Label Content="Размер шрифта текстовых блоков:" HorizontalAlignment="Center" />
+            <TextBox TextWrapping="Wrap" Text="{Binding ElementName=slider1, Path=Value, Mode=TwoWay}" Width="120"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="AllLabsInOne.LABA1_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllLabsInOne"
+        mc:Ignorable="d"
+        Title="LABA1_2" Height="450" Width="800" 
+        ResizeMode="NoResize" 
+WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <StackPanel DockPanel.Dock="Left" >
+                <Label Content="Последние документы"/>
+                <Label Content="1.txt"/>
+                <Label Content="2.txt"/>
+                <Label Content="3.txt"/>
+                <Label Content="4.txt"/>
+                <Label Content="5.txt"/>
+                <Label Content="6.txt"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock ="Top" Orientation="Horizontal">
+                <Button Content="Открыть" Margin="10"/>
+                <Button Content="Сохранить" Margin="10"/>
+                <Button Content="Закрыть" Margin="10"/>
+                <Button Content="Обработать" Margin="10"/>
+                <Button Content="О программе" Margin="10"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <Label Content="1.txt" FontWeight="Bold"/>
+                <Label Content="2.txt"/>
+                <Label Content="3.txt"/>
+            </StackPanel>
+            <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Background="Yellow" Height="80" Width="80" Margin="10" Content="A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Background="Red" Height="80" Width="80" Margin="10" Content="B" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Background="Green" Height="80" Width="80" Margin="10" Content="C" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Background="Blue" Height="80" Width="80" Margin="10" Content="D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Background="Gray" Height="80" Width="80" Margin="10" Content="E" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Background="Bisque" Height="80" Width="80" Margin="10" Content="F" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </WrapPanel>
+        </DockPanel>
+    </Grid>
+</Window>

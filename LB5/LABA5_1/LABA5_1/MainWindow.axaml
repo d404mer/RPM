@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="LABA5_1.MainWindow"
+        Title="LABA5_1">
+	<Grid x:Name="MainGrid">
+
+
+		<!--<Style Selector="Button">
+				<Setter Property="Foreground" Value="AliceBlue"/>		
+		</Style>-->
+			
+		<DockPanel>
+			<WrapPanel Margin="10,5,0,0" DockPanel.Dock="Top">
+				<Button Name="Exit_Button" Content="Exit" Click="ExitButton_Click"/>
+				<Button Name="About_Button" Content="About" Click="AboutButton_Click"/>
+				<Button Name="Red_Button" Content="Red" Click="RedButton_Click" />
+				<Button Name="Yellow_Button" Content="Yellow" Click="YellowButton_Click"/>
+			</WrapPanel>
+		</DockPanel>
+
+		<!-- Менюшка слева -->
+		<DockPanel>
+			<WrapPanel Margin="10,50,0,0" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="75">
+				<StackPanel>
+					<Button Content="EXIT" Click="ExitButton_Click" />
+					<Button Content="ABOUT" Click="AboutButton_Click"/>
+					<Button Content="RED" Click="RedButton_Click"/>
+					<Button Content="YELLOW" Click="YellowButton_Click"/>
+				</StackPanel>
+			</WrapPanel>
+		</DockPanel>
+	</Grid>
+</Window>
