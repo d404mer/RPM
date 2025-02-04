@@ -1489,11 +1489,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
+      "projectUniqueName": "D:\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
       "projectName": "LABA5_1",
-      "projectPath": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
+      "projectPath": "D:\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\obj\\",
+      "outputPath": "D:\\RPM\\LB5\\LABA5_1\\LABA5_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1568,7 +1568,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

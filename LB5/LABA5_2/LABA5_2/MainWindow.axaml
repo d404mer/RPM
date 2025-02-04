@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="LABA5_2.MainWindow"
+        Title="LABA5_2">
+	<Window.Styles>
+	<!-- Selector to apply a style to all Path elements -->
+	<Style Selector="Path:hover">
+		<Setter Property="Stroke" Value="Green"/>
+		<Setter Property="StrokeThickness" Value="5"/>
+	</Style>
+	<Style Selector="Path">
+		<Setter Property="Stroke" Value="Black"/>
+		<Setter Property="StrokeThickness" Value="2"/>
+	</Style>
+	</Window.Styles>
+
+	<DockPanel>
+		<!-- Панель с инструментами для изменения параметров рисования -->
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="10">
+			<!-- Кнопки для выбора цвета -->
+			<Button Content="Black" Click="SetColorBlack"/>
+			<Button Content="Red" Click="SetColorRed"/>
+			<Button Content="Green" Click="SetColorGreen"/>
+
+			<!-- Ползунок для выбора толщины -->
+			<Slider Name="brushSizeSlider" Minimum="1" Maximum="10" Value="2" TickFrequency="1" Margin="5" />
+		</StackPanel>
+		<Canvas x:Name="drawCanvas"  Background="White"  PointerMoved="OnPointerMoved" PointerReleased="OnPointerReleased" />
+	</DockPanel>
+</Window>

@@ -15,15 +15,15 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LABA5_1
-build_property.ProjectDir = D:\CIT KAI\RPM\LB5\LABA5_1\LABA5_1\
+build_property.ProjectDir = D:\RPM\LB5\LABA5_1\LABA5_1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/CIT KAI/RPM/LB5/LABA5_1/LABA5_1/App.axaml]
+[D:/RPM/LB5/LABA5_1/LABA5_1/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/CIT KAI/RPM/LB5/LABA5_1/LABA5_1/MainWindow.axaml]
+[D:/RPM/LB5/LABA5_1/LABA5_1/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/CIT KAI/RPM/LB5/LABA5_1/LABA5_1/MessageBoxWindow.axaml]
+[D:/RPM/LB5/LABA5_1/LABA5_1/MessageBoxWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
