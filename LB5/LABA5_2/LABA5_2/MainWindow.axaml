@@ -2,11 +2,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500" MinHeight="500" MinWidth="1000"
         x:Class="LABA5_2.MainWindow"
         Title="LABA5_2">
 	<Window.Styles>
-	<!-- Selector to apply a style to all Path elements -->
 	<Style Selector="Path:hover">
 		<Setter Property="Stroke" Value="Green"/>
 		<Setter Property="StrokeThickness" Value="5"/>
@@ -18,18 +17,41 @@
 	</Window.Styles>
 
 	<DockPanel>
-		<!-- Панель с инструментами для изменения параметров рисования -->
-		<StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="10">
-			<!-- Кнопки для выбора цвета -->
-			<Button Content="Black" Click="SetColorBlack"/>
-			<Button Content="Red" Click="SetColorRed"/>
-			<Button Content="Blue" Click="SetColorBlue"/>
+		
+		<StackPanel 
+			Orientation="Horizontal" 
+			HorizontalAlignment="Center" 
+			Spacing="10" 
+			DockPanel.Dock="Top" 
+			Margin="0,0,0,0">
+			
+			<TextBlock VerticalAlignment="Center" Text="Цвета: " />
+			<!-- ЦВЕТА -->
+			
+					<Button Content="Black" Click="SetColorBlack"/>
+				
 
-			<!-- Ползунок для выбора толщины -->
-			<Slider Name="brushSizeSlider" Minimum="1" Maximum="10" Value="2" TickFrequency="1" Margin="5" />
+			
+					<Button Content="Red" Click="SetColorRed"/>
+				
+				
+				
+					<Button Content="Blue" Click="SetColorBlue"/>	
+				
+			<!-- СЛАЙДЕР -->
+			<TextBlock VerticalAlignment="Center" Text="Размер пера: " />
+			<Slider Width="150" Name="brushSizeSlider" Minimum="1" Maximum="10" Value="2" TickFrequency="1" Margin="0,0,0,0" />
+
+			<TextBlock VerticalAlignment="Center" Text="Режим: " />
+
+		<StackPanel VerticalAlignment="Center" Orientation="Horizontal" Spacing="10">
+			<Button x:Name="drawButton" Content="Draw" Click="OnModeButtonClick" Margin="5"/>
+			<Button x:Name="editButton" Content="Edit" Click="OnModeButtonClick" Margin="5"/>
+			<Button x:Name="eraseButton" Content="Erase" Click="OnModeButtonClick" Margin="5"/>
+		</StackPanel>	
 		</StackPanel>
 		<Canvas x:Name="drawCanvas"
-        Background="White"
+        Background="Gold"
         PointerPressed="OnPointerPressed"
         PointerMoved="OnPointerMoved"
         PointerReleased="OnPointerReleased" />
