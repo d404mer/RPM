@@ -23,11 +23,16 @@
 			<!-- Кнопки для выбора цвета -->
 			<Button Content="Black" Click="SetColorBlack"/>
 			<Button Content="Red" Click="SetColorRed"/>
-			<Button Content="Green" Click="SetColorGreen"/>
+			<Button Content="Blue" Click="SetColorBlue"/>
 
 			<!-- Ползунок для выбора толщины -->
 			<Slider Name="brushSizeSlider" Minimum="1" Maximum="10" Value="2" TickFrequency="1" Margin="5" />
 		</StackPanel>
-		<Canvas x:Name="drawCanvas"  Background="White"  PointerMoved="OnPointerMoved" PointerReleased="OnPointerReleased" />
+		<Canvas x:Name="drawCanvas"
+        Background="White"
+        PointerPressed="OnPointerPressed"
+        PointerMoved="OnPointerMoved"
+        PointerReleased="OnPointerReleased" />
+
 	</DockPanel>
 </Window>

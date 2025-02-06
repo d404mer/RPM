@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5rNMfRSv9gSRVgMstlU5jkp7Z9UVzIMg0KHUnYBYVvYgNJ+GcWCDkpFifnz7KLOB+Owg+pO9colYEMWljMVXg==",
+  "dgSpecHash": "vRiy3bKP/pthpwZGUViPtMjTxc+WG32nEUe+s6kkZQQgrr010bjzMn48SBjBZiIIrInk9/4rHNouUePH/bikXw==",
   "success": true,
-  "projectFilePath": "D:\\RPM\\LB5\\LABA5_2\\LABA5_2\\LABA5_2.csproj",
+  "projectFilePath": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\LABA5_2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\avalonia\\11.2.1\\avalonia.11.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
