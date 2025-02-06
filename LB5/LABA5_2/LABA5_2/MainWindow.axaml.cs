@@ -1,4 +1,4 @@
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia;
 using Avalonia.Input;
@@ -11,9 +11,12 @@ namespace LABA5_2
     public partial class MainWindow : Window
     {
         private bool isDrawing = false;
+        private bool isErasing = false;
+        private bool isMovingLine = false; 
         private Point lastPoint;
         private List<Line> lines = new List<Line>();
-        private Brush currentColor = new SolidColorBrush(Colors.Black); 
+        private List<Line> selectedLines = new List<Line>(); 
+        private Brush currentColor = new SolidColorBrush(Colors.Black);
         private double currentBrushSize = 2;
         private string currentMode = "Draw";
 
@@ -35,12 +38,17 @@ namespace LABA5_2
                 }
                 else if (currentMode == "Edit")
                 {
-                    // Start editing: Select a line to move
-                    SelectLineAtPoint(lastPoint);
+                    DeselectLines();
+                    SelectLinesAtPoint(lastPoint); 
+                    if (selectedLines.Count > 0)  
+                    {
+                        isMovingLine = true;
+                    }
+                    SelectLinesAtPoint(lastPoint);
                 }
                 else if (currentMode == "Erase")
                 {
-                    // Start erasing: Erase a line
+                    isErasing = true;
                     EraseLineAtPoint(lastPoint);
                 }
             }
@@ -48,22 +56,28 @@ namespace LABA5_2
 
         private void OnPointerMoved(object sender, PointerEventArgs e)
         {
+            var currentPoint = e.GetPosition(drawCanvas);
+
             if (isDrawing && currentMode == "Draw")
             {
-                var currentPoint = e.GetPosition(drawCanvas);
                 DrawLine(lastPoint, currentPoint);
                 lastPoint = currentPoint;
             }
-            else if (currentMode == "Edit")
+            else if (isMovingLine && currentMode == "Edit" && selectedLines.Count > 0)
             {
-                // Move selected line (if any)
-                MoveSelectedLine(e.GetPosition(drawCanvas));
+                MoveSelectedLines(currentPoint);  
+            }
+            else if (currentMode == "Erase")
+            {
+                EraseLineAtPoint(currentPoint);
             }
         }
 
         private void OnPointerReleased(object sender, PointerReleasedEventArgs e)
         {
             isDrawing = false;
+            isErasing = false;
+            isMovingLine = false; 
         }
 
         private void DrawLine(Point start, Point end)
@@ -72,12 +86,12 @@ namespace LABA5_2
             {
                 StartPoint = start,
                 EndPoint = end,
-                Stroke = currentColor, 
+                Stroke = currentColor,
                 StrokeThickness = currentBrushSize
             };
 
             drawCanvas.Children.Add(line);
-            ((ISetLogicalParent)line).SetParent(drawCanvas); 
+            ((ISetLogicalParent)line).SetParent(drawCanvas);
 
             lines.Add(line);
         }
@@ -106,7 +120,7 @@ namespace LABA5_2
         {
             foreach (var line in lines)
             {
-                if (Math.Abs(line.StartPoint.X - point.X) < 10 && Math.Abs(line.StartPoint.Y - point.Y) < 10)
+                if (Math.Abs(line.StartPoint.X - point.X) < currentBrushSize && Math.Abs(line.StartPoint.Y - point.Y) < currentBrushSize)
                 {
                     drawCanvas.Children.Remove(line);
                     lines.Remove(line);
@@ -115,38 +129,64 @@ namespace LABA5_2
             }
         }
 
-        private void SelectLineAtPoint(Point point)
+        private void SelectLinesAtPoint(Point point)
         {
-            foreach (var line in lines)
-            {
-                if (Math.Abs(line.StartPoint.X - point.X) < 10 && Math.Abs(line.StartPoint.Y - point.Y) < 10)
-                {
-                    line.Stroke = new SolidColorBrush(Colors.Green);  // Highlight the selected line
-                    break;
-                }
-            }
-        }
+            selectedLines.Clear();  
 
-        private void MoveSelectedLine(Point newPoint)
-        {
+            double selectionThreshold = 500;
+
            
             foreach (var line in lines)
             {
-                if (line.Stroke == new SolidColorBrush(Colors.Red))
+            
+                if (Math.Abs(line.StartPoint.X - point.X) < selectionThreshold && Math.Abs(line.StartPoint.Y - point.Y) < selectionThreshold ||
+                    Math.Abs(line.EndPoint.X - point.X) < selectionThreshold && Math.Abs(line.EndPoint.Y - point.Y) < selectionThreshold)
                 {
-                    var deltaX = newPoint.X - line.StartPoint.X;
-                    var deltaY = newPoint.Y - line.StartPoint.Y;
-
-                    line.StartPoint = new Point(line.StartPoint.X + deltaX, line.StartPoint.Y + deltaY);
-                    line.EndPoint = new Point(line.EndPoint.X + deltaX, line.EndPoint.Y + deltaY);
-                    break;
+                    if (line.Stroke.Equals(currentColor))  
+                    {
+                        selectedLines.Add(line);
+                        //line.Stroke = new SolidColorBrush(Colors.Green);  // Выделяем линию
+                        line.StrokeThickness = currentBrushSize + 2;  
+                    }
                 }
             }
         }
 
-         private void OnModeButtonClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void DeselectLines()
         {
- 
+            
+            foreach (var line in selectedLines)
+            {
+                
+                //line.Stroke = new SolidColorBrush(currentColor); 
+                line.StrokeThickness = currentBrushSize;  
+            }
+
+            selectedLines.Clear();
+        }
+
+
+
+
+        private void MoveSelectedLines(Point newPoint)
+        {
+            if (selectedLines.Count > 0)
+            {
+                var deltaX = newPoint.X - lastPoint.X;
+                var deltaY = newPoint.Y - lastPoint.Y;
+
+                foreach (var line in selectedLines)
+                {
+                    line.StartPoint = new Point(line.StartPoint.X + deltaX, line.StartPoint.Y + deltaY);
+                    line.EndPoint = new Point(line.EndPoint.X + deltaX, line.EndPoint.Y + deltaY);
+                }
+            }
+
+            lastPoint = newPoint;
+        }
+
+        private void OnModeButtonClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
             if (sender == drawButton)
             {
                 currentMode = "Draw";

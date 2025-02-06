@@ -51,7 +51,7 @@
 		</StackPanel>	
 		</StackPanel>
 		<Canvas x:Name="drawCanvas"
-        Background="Gold"
+        Background="WhiteSmoke"
         PointerPressed="OnPointerPressed"
         PointerMoved="OnPointerMoved"
         PointerReleased="OnPointerReleased" />
