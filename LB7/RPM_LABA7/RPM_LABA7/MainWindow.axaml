@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="RPM_LABA7.MainWindow"
+        Title="Menu"
+		Width="150"
+		Height="700"
+		MinWidth="150"
+		MaxWidth="150"
+		MaxHeight="700"
+		MinHeight="150"
+		Padding="10"
+		CanResize="True"
+		Background="Black"
+		WindowStartupLocation="Manual"
+		>
+
+	<Window.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Black"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="FontFamily" Value="Arial"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Margin" Value="10"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="BorderBrush" Value="White"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="MinWidth" Value="100"/>
+			<Setter Property="MaxWidth" Value="120"/>
+		</Style>
+
+
+
+
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="FontFamily" Value="Arial"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+	</Window.Styles>
+
+	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+		<TextBlock FontWeight="Black" Text="Анимация в WPF приложениях"/>
+		<Button Click="RunnerOpen">
+			<TextBlock Text="Убегающая кнопка"/>
+		</Button>
+		<Button Click="PulsarOpen">
+			<TextBlock Text="Пульсар"/>
+		</Button>
+		<Button Click="CarouselOpen">
+			<TextBlock Text="Карусель"/>
+		</Button>
+	</StackPanel>
+
+</Window>

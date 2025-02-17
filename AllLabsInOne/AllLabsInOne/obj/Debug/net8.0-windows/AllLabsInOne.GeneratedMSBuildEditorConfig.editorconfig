@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AllLabsInOne
-build_property.ProjectDir = D:\CIT KAI\KIT-lab\2 курс\РПМ\! сдача всех лаб\AllLabsInOne\AllLabsInOne\
+build_property.ProjectDir = D:\RPM\AllLabsInOne\AllLabsInOne\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

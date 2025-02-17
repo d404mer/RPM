@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CIT KAI\\KIT-lab\\2 курс\\РПМ\\! сдача всех лаб\\AllLabsInOne\\AllLabsInOne\\AllLabsInOne.csproj",
+      "projectUniqueName": "D:\\RPM\\AllLabsInOne\\AllLabsInOne\\AllLabsInOne.csproj",
       "projectName": "AllLabsInOne",
-      "projectPath": "D:\\CIT KAI\\KIT-lab\\2 курс\\РПМ\\! сдача всех лаб\\AllLabsInOne\\AllLabsInOne\\AllLabsInOne.csproj",
+      "projectPath": "D:\\RPM\\AllLabsInOne\\AllLabsInOne\\AllLabsInOne.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\CIT KAI\\KIT-lab\\2 курс\\РПМ\\! сдача всех лаб\\AllLabsInOne\\AllLabsInOne\\obj\\",
+      "outputPath": "D:\\RPM\\AllLabsInOne\\AllLabsInOne\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

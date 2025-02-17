@@ -1,0 +1,10 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="RPM_LABA7.Runner"
+        Title="Runner">
+
+	<Canvas x:Name="MainCanvas">
+		<Button x:Name="runAwayButton" Width="100" Height="50" Canvas.Left="50" Canvas.Top="50" Content="кнопка"/>
+
+	</Canvas>
+</Window>

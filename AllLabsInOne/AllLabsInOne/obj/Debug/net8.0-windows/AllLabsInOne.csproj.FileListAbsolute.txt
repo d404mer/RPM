@@ -71,3 +71,40 @@ D:\CIT KAI\KIT-lab\2 курс\РПМ\! сдача всех лаб\AllLabsInOne\A
 D:\CIT KAI\KIT-lab\2 курс\РПМ\! сдача всех лаб\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.pdb
 D:\CIT KAI\KIT-lab\2 курс\РПМ\! сдача всех лаб\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.genruntimeconfig.cache
 D:\CIT KAI\KIT-lab\2 курс\РПМ\! сдача всех лаб\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\ref\AllLabsInOne.dll
+D:\RPM\AllLabsInOne\AllLabsInOne\bin\Debug\net8.0-windows\AllLabsInOne.exe
+D:\RPM\AllLabsInOne\AllLabsInOne\bin\Debug\net8.0-windows\AllLabsInOne.deps.json
+D:\RPM\AllLabsInOne\AllLabsInOne\bin\Debug\net8.0-windows\AllLabsInOne.runtimeconfig.json
+D:\RPM\AllLabsInOne\AllLabsInOne\bin\Debug\net8.0-windows\AllLabsInOne.dll
+D:\RPM\AllLabsInOne\AllLabsInOne\bin\Debug\net8.0-windows\AllLabsInOne.pdb
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA1-1.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA1-2.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA3-1.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA3-2.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA4-1.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA4-2.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA5.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\SLIDER.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\App.g.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne_MarkupCompile.cache
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne_MarkupCompile.lref
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA1-1.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA1-2.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA3-1.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA3-2.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA4-1.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA4-2.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\LABA5.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\MainWindow.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\SLIDER.baml
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.g.resources
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.GeneratedMSBuildEditorConfig.editorconfig
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.AssemblyInfoInputs.cache
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.AssemblyInfo.cs
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.csproj.CoreCompileInputs.cache
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.sourcelink.json
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.dll
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\refint\AllLabsInOne.dll
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.pdb
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\AllLabsInOne.genruntimeconfig.cache
+D:\RPM\AllLabsInOne\AllLabsInOne\obj\Debug\net8.0-windows\ref\AllLabsInOne.dll
