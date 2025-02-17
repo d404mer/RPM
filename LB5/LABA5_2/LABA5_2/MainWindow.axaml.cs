@@ -1,92 +1,204 @@
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Media;
-using System.Collections.Generic;
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Input;
-using Avalonia.Media;
+using Avalonia.Controls.Shapes;
 using System;
 using System.Collections.Generic;
-using Avalonia.Controls.Shapes;
 
 namespace LABA5_2
 {
     public partial class MainWindow : Window
     {
-        private bool isDrawing = false; // Флаг рисования
-        private Point lastPoint; // Точка начала рисования
-        private List<Line> lines = new List<Line>(); // Список всех линий, нарисованных на холсте
-        private Brush currentColor = Brushes.Black as Brush; // Текущий цвет
-        private double currentBrushSize = 2; // Текущая толщина кисти
+        private bool isDrawing = false;
+        private bool isErasing = false;
+        private bool isMovingLine = false; 
+        private Point lastPoint;
+        private List<Line> lines = new List<Line>();
+        private List<Line> selectedLines = new List<Line>(); 
+        private Brush currentColor = new SolidColorBrush(Colors.Black);
+        private double currentBrushSize = 2;
+        private string currentMode = "Draw";
+
         public MainWindow()
         {
             InitializeComponent();
+            brushSizeSlider.ValueChanged += brushSizeSlider_ValueChanged;
         }
-        // Обработчик начала рисования (когда нажата кнопка мыши)
+
         private void OnPointerPressed(object sender, PointerPressedEventArgs e)
         {
             if (e.GetCurrentPoint(drawCanvas).Properties.IsLeftButtonPressed)
             {
-                isDrawing = true;
-                lastPoint = e.GetPosition(drawCanvas); // Сохраняем начальную точку
+                lastPoint = e.GetPosition(drawCanvas);
+
+                if (currentMode == "Draw")
+                {
+                    isDrawing = true;
+                }
+                else if (currentMode == "Edit")
+                {
+                    DeselectLines();
+                    SelectLinesAtPoint(lastPoint); 
+                    if (selectedLines.Count > 0)  
+                    {
+                        isMovingLine = true;
+                    }
+                    SelectLinesAtPoint(lastPoint);
+                }
+                else if (currentMode == "Erase")
+                {
+                    isErasing = true;
+                    EraseLineAtPoint(lastPoint);
+                }
             }
         }
 
-        // Обработчик рисования (когда мышь перемещается)
         private void OnPointerMoved(object sender, PointerEventArgs e)
         {
-            if (isDrawing)
+            var currentPoint = e.GetPosition(drawCanvas);
+
+            if (isDrawing && currentMode == "Draw")
             {
-                var currentPoint = e.GetPosition(drawCanvas); // Получаем текущую точку
-                DrawLine(lastPoint, currentPoint); // Рисуем линию
-                lastPoint = currentPoint; // Обновляем начальную точку для следующего сегмента
+                DrawLine(lastPoint, currentPoint);
+                lastPoint = currentPoint;
+            }
+            else if (isMovingLine && currentMode == "Edit" && selectedLines.Count > 0)
+            {
+                MoveSelectedLines(currentPoint);  
+            }
+            else if (currentMode == "Erase")
+            {
+                EraseLineAtPoint(currentPoint);
             }
         }
 
-        // Обработчик завершения рисования (когда кнопка мыши отпущена)
         private void OnPointerReleased(object sender, PointerReleasedEventArgs e)
         {
-            if (isDrawing)
-            {
-                isDrawing = false; // Завершаем рисование
-            }
+            isDrawing = false;
+            isErasing = false;
+            isMovingLine = false; 
         }
 
-        // Метод для рисования линии
         private void DrawLine(Point start, Point end)
         {
             var line = new Line
             {
                 StartPoint = start,
                 EndPoint = end,
-                Stroke = currentColor, // Устанавливаем цвет линии
-                StrokeThickness = currentBrushSize // Устанавливаем толщину линии
+                Stroke = currentColor,
+                StrokeThickness = currentBrushSize
             };
 
-            drawCanvas.Children.Add(line); // Добавляем линию на холст
-            lines.Add(line); // Добавляем линию в список (для возможного использования в будущем)
+            drawCanvas.Children.Add(line);
+            ((ISetLogicalParent)line).SetParent(drawCanvas);
+
+            lines.Add(line);
         }
 
-        // Методы для изменения цвета
         private void SetColorBlack(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            currentColor = Brushes.Black as Brush;
+            currentColor = new SolidColorBrush(Colors.Black);
         }
 
         private void SetColorRed(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            currentColor = Brushes.Red as Brush;
+            currentColor = new SolidColorBrush(Colors.Red);
         }
 
-        private void SetColorGreen(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void SetColorBlue(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            currentColor = Brushes.Green as Brush;
+            currentColor = new SolidColorBrush(Colors.Blue);
         }
 
-        // Метод для изменения толщины кисти
         private void brushSizeSlider_ValueChanged(object sender, Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs e)
         {
             currentBrushSize = e.NewValue;
+        }
+
+        private void EraseLineAtPoint(Point point)
+        {
+            foreach (var line in lines)
+            {
+                if (Math.Abs(line.StartPoint.X - point.X) < currentBrushSize && Math.Abs(line.StartPoint.Y - point.Y) < currentBrushSize)
+                {
+                    drawCanvas.Children.Remove(line);
+                    lines.Remove(line);
+                    break;
+                }
+            }
+        }
+
+        private void SelectLinesAtPoint(Point point)
+        {
+            selectedLines.Clear();  
+
+            double selectionThreshold = 500;
+
+           
+            foreach (var line in lines)
+            {
+            
+                if (Math.Abs(line.StartPoint.X - point.X) < selectionThreshold && Math.Abs(line.StartPoint.Y - point.Y) < selectionThreshold ||
+                    Math.Abs(line.EndPoint.X - point.X) < selectionThreshold && Math.Abs(line.EndPoint.Y - point.Y) < selectionThreshold)
+                {
+                    if (line.Stroke.Equals(currentColor))  
+                    {
+                        selectedLines.Add(line);
+                        //line.Stroke = new SolidColorBrush(Colors.Green);  // Выделяем линию
+                        line.StrokeThickness = currentBrushSize + 2;  
+                    }
+                }
+            }
+        }
+
+        private void DeselectLines()
+        {
+            
+            foreach (var line in selectedLines)
+            {
+                
+                //line.Stroke = new SolidColorBrush(currentColor); 
+                line.StrokeThickness = currentBrushSize;  
+            }
+
+            selectedLines.Clear();
+        }
+
+
+
+
+        private void MoveSelectedLines(Point newPoint)
+        {
+            if (selectedLines.Count > 0)
+            {
+                var deltaX = newPoint.X - lastPoint.X;
+                var deltaY = newPoint.Y - lastPoint.Y;
+
+                foreach (var line in selectedLines)
+                {
+                    line.StartPoint = new Point(line.StartPoint.X + deltaX, line.StartPoint.Y + deltaY);
+                    line.EndPoint = new Point(line.EndPoint.X + deltaX, line.EndPoint.Y + deltaY);
+                }
+            }
+
+            lastPoint = newPoint;
+        }
+
+        private void OnModeButtonClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (sender == drawButton)
+            {
+                currentMode = "Draw";
+            }
+            else if (sender == editButton)
+            {
+                currentMode = "Edit";
+            }
+            else if (sender == eraseButton)
+            {
+                currentMode = "Erase";
+            }
         }
     }
 }

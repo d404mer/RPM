@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\RPM\\LB5\\LABA5_2\\",
+  "WorkspaceRootPath": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|d:\\rpm\\lb5\\laba5_2\\laba5_2\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|solutionrelative:laba5_2\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\laba5_2\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|solutionrelative:laba5_2\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|d:\\rpm\\lb5\\laba5_2\\laba5_2\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|solutionrelative:laba5_2\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|d:\\cit kai\\rpm\\lb5\\laba5_2\\laba5_2\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{0AAEB327-8FFF-4AFC-8F79-77F04B156F54}|LABA5_2\\LABA5_2.csproj|solutionrelative:laba5_2\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,16 +21,12 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.axaml",
-              "DocumentMoniker": "D:\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml",
               "RelativeDocumentMoniker": "LABA5_2\\MainWindow.axaml",
-              "ToolTip": "D:\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml",
               "RelativeToolTip": "LABA5_2\\MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-04T15:39:22.293Z",
@@ -38,26 +34,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "D:\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml.cs",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "LABA5_2\\MainWindow.axaml.cs",
-              "ToolTip": "D:\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml.cs",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml.cs",
               "RelativeToolTip": "LABA5_2\\MainWindow.axaml.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAEwFAAAAAiAAAA",
+              "ViewState": "AQIAAKQAAAAAAAAAAADwv7AAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T15:39:22.137Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 464,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }
