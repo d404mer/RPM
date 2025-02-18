@@ -12,76 +12,59 @@ namespace RPM_LABA7
 {
     public partial class Carousel : Window
     {
-        private ScaleTransform scaleTransform;
-        private SkewTransform skewTransform;
+        private bool isAnimating = false; // Флаг для предотвращения двойного вызова
+        private Image? imageControl;  // Переименовали в imageControl
 
         // Объявляем анимируемые свойства
         public static readonly StyledProperty<double> ImageScaleXProperty =
-            AvaloniaProperty.Register<Carousel, double>(nameof(ImageScaleX));
+            AvaloniaProperty.Register<Carousel, double>(nameof(ImageScaleX), 1.0);
         public static readonly StyledProperty<double> ImageScaleYProperty =
-            AvaloniaProperty.Register<Carousel, double>(nameof(ImageScaleY));
+            AvaloniaProperty.Register<Carousel, double>(nameof(ImageScaleY), 1.0);
         public static readonly StyledProperty<double> ImageSkewAngleYProperty =
-            AvaloniaProperty.Register<Carousel, double>(nameof(ImageSkewAngleY));
+            AvaloniaProperty.Register<Carousel, double>(nameof(ImageSkewAngleY), 22.0);
 
         public double ImageScaleX
         {
             get => GetValue(ImageScaleXProperty);
-            set
-            {
-                SetValue(ImageScaleXProperty, value);
-                if (scaleTransform != null)
-                    scaleTransform.ScaleX = value;
-            }
+            set => SetValue(ImageScaleXProperty, value);
         }
 
         public double ImageScaleY
         {
             get => GetValue(ImageScaleYProperty);
-            set
-            {
-                SetValue(ImageScaleYProperty, value);
-                if (scaleTransform != null)
-                    scaleTransform.ScaleY = value;
-            }
+            set => SetValue(ImageScaleYProperty, value);
         }
 
         public double ImageSkewAngleY
         {
             get => GetValue(ImageSkewAngleYProperty);
-            set
-            {
-                SetValue(ImageSkewAngleYProperty, value);
-                if (skewTransform != null)
-                    skewTransform.AngleY = value;
-            }
+            set => SetValue(ImageSkewAngleYProperty, value);
         }
 
         public Carousel()
         {
             InitializeComponent();
-            var image = this.FindControl<Image>("image");
+            DataContext = this;
 
-            // Получаем ScaleTransform и SkewTransform из RenderTransform
-            if (image.RenderTransform is TransformGroup transformGroup)
-            {
-                scaleTransform = transformGroup.Children[0] as ScaleTransform;
-                skewTransform = transformGroup.Children[1] as SkewTransform;
-            }
-
-            // Инициализируем свойства начальными значениями
-            ImageScaleX = 1.0;
-            ImageScaleY = 1.0;
-            ImageSkewAngleY = 22.0;
+            // Присваиваем imageControl
+            imageControl = this.FindControl<Image>("image");
 
             // Подписываемся на событие PointerPressed
-            image.PointerPressed += Image_PointerPressed;
+            if (imageControl != null)
+            {
+                imageControl.PointerPressed += Image_PointerPressed;
+            }
         }
 
         private async void Image_PointerPressed(object? sender, PointerPressedEventArgs e)
         {
-            if (scaleTransform == null || skewTransform == null)
+            if (isAnimating) return;  // Предотвращаем повторный вызов
+            var secondWindow = new Runner();
+            secondWindow.Show();
+            isAnimating = true;
+
+            if (imageControl == null)
             {
-                Console.WriteLine("ScaleTransform или SkewTransform не найдены!");
                 return;
             }
 
@@ -145,10 +128,12 @@ namespace RPM_LABA7
                 }
             };
 
-            // Запускаем анимации на this (окно наследует Visual)
-            await scaleXAnimation.RunAsync(this, CancellationToken.None);
-            await scaleYAnimation.RunAsync(this, CancellationToken.None);
-            await skewAnimation.RunAsync(this, CancellationToken.None);
+            // Запускаем анимации на imageControl, а не на Window
+            await scaleXAnimation.RunAsync(imageControl, CancellationToken.None);
+            await scaleYAnimation.RunAsync(imageControl, CancellationToken.None);
+            await skewAnimation.RunAsync(imageControl, CancellationToken.None);
+
+            isAnimating = false; // Сбрасываем флаг после завершения анимации
         }
     }
 }

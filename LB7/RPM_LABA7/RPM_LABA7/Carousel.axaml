@@ -1,22 +1,25 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="RPM_LABA7.Carousel"
-        Title="Carousel">
-  <Canvas>
-    <!-- Изображение -->
-    <Image x:Name="image"
-           Canvas.Left="50"
-           Canvas.Top="270"
-           Width="120"
-           Source="image.jpg"
-           Opacity="0.3"
-           PointerPressed="Image_PointerPressed">
-      <Image.RenderTransform>
-        <TransformGroup>
-          <ScaleTransform ScaleX="1" ScaleY="1"/>
-          <SkewTransform AngleY="22"/>
-        </TransformGroup>
-      </Image.RenderTransform>
-    </Image>
-  </Canvas>
+        xmlns:local="clr-namespace:RPM_LABA7"
+	x:Class="RPM_LABA7.Carousel"
+	x:DataType="local:Carousel" 
+	Title="Carousel">
+	<Canvas>
+		<!-- Изображение -->
+		<Image x:Name="image"
+			   Canvas.Left="50"
+			   Canvas.Top="270"
+			   Width="120"
+			   Source="image.jpg"
+			   Opacity="0.3"
+			   PointerPressed="Image_PointerPressed">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="{Binding ImageScaleX}"
+									ScaleY="{Binding ImageScaleY}"/>
+					<SkewTransform AngleY="{Binding ImageSkewAngleY}"/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+	</Canvas>
 </Window>

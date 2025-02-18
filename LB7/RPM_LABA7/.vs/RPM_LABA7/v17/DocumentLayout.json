@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\RPM\\LB7\\RPM_LABA7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\carousel.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\carousel.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\carousel.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\carousel.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\carousel.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\carousel.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
@@ -35,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\pulsar.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|D:\\RPM\\LB7\\RPM_LABA7\\rpm_laba7\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Runner.axaml",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Runner.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\Runner.axaml",
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Runner.axaml.cs",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Runner.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\Runner.axaml.cs",
@@ -99,14 +99,14 @@
               "RelativeDocumentMoniker": "RPM_LABA7\\Carousel.axaml.cs",
               "ToolTip": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Carousel.axaml.cs",
               "RelativeToolTip": "RPM_LABA7\\Carousel.axaml.cs",
-              "ViewState": "AQIAAIQAAAAAAAAAAAAqwJoAAAAAAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAgwD4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T14:17:10.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Pulsar.axaml",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Pulsar.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\Pulsar.axaml",
@@ -117,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Pulsar.axaml.cs",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Pulsar.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\Pulsar.axaml.cs",
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RPM_LABA7.csproj",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\RPM_LABA7.csproj",
               "RelativeDocumentMoniker": "RPM_LABA7\\RPM_LABA7.csproj",
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\MainWindow.axaml",
@@ -165,15 +165,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\MainWindow.axaml.cs",
               "ToolTip": "D:\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml.cs",
               "RelativeToolTip": "RPM_LABA7\\MainWindow.axaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAgwBYAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:39:02.002Z"
+              "WhenOpened": "2025-02-17T13:39:02.002Z",
+              "EditorCaption": ""
             }
           ]
         },
