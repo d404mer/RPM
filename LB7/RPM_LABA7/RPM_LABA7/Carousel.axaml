@@ -7,17 +7,17 @@
 	<Canvas>
 		<!-- Изображение -->
 		<Image x:Name="image"
-			   Canvas.Left="50"
-			   Canvas.Top="270"
-			   Width="120"
-			   Source="image.jpg"
-			   Opacity="0.3"
-			   PointerPressed="Image_PointerPressed">
+               Canvas.Left="50"
+               Canvas.Top="270"
+               Width="120"
+               Source="image.jpg"
+               Opacity="0.3"
+               PointerPressed="Image_PointerPressed">
 			<Image.RenderTransform>
 				<TransformGroup>
-					<ScaleTransform ScaleX="{Binding ImageScaleX}"
-									ScaleY="{Binding ImageScaleY}"/>
-					<SkewTransform AngleY="{Binding ImageSkewAngleY}"/>
+					<!-- Применяем ScaleTransform и SkewTransform без атрибута Name -->
+					<ScaleTransform ScaleX="1" ScaleY="1" />
+					<SkewTransform AngleY="22" />
 				</TransformGroup>
 			</Image.RenderTransform>
 		</Image>
