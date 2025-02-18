@@ -1,69 +1,22 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RPM_LABA7.Carousel"
         Title="Carousel">
-
-	<Window.Resources>
-		<Animation x:Key="ImageAnimation"
-                   TargetType="Image"
-                   IterationCount="1"
-                   Duration="0:0:2">
-			<KeyFrame Cue="0%">
-				<Setter Property="Image.RenderTransform">
-					<Setter.Value>
-						<TransformGroup>
-							<ScaleTransform ScaleX="1" ScaleY="1"/>
-							<SkewTransform AngleX="0" AngleY="0"/>
-							<TranslateTransform X="0" Y="0"/>
-						</TransformGroup>
-					</Setter.Value>
-				</Setter>
-				<Setter Property="Image.Opacity" Value="0.5"/>
-			</KeyFrame>
-			<KeyFrame Cue="100%">
-				<Setter Property="Image.RenderTransform">
-					<Setter.Value>
-						<TransformGroup>
-							<ScaleTransform ScaleX="2" ScaleY="2"/>
-							<SkewTransform AngleX="15" AngleY="15"/>
-							<TranslateTransform X="350" Y="-125"/>
-						</TransformGroup>
-					</Setter.Value>
-				</Setter>
-				<Setter Property="Image.Opacity" Value="1"/>
-			</KeyFrame>
-		</Animation>
-	</Window.Resources>
-
-	<Canvas>
-		<!-- Первое изображение -->
-		<Image x:Name="img1" Width="100" Source="image.jpg"
-               Opacity="0.2" RenderTransformOrigin="0.5,0.5">
-			<Image.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform ScaleX="1" ScaleY="1"/>
-					<SkewTransform AngleY="20"/>
-				</TransformGroup>
-			</Image.RenderTransform>
-			<Canvas.Left>50</Canvas.Left>
-			<Canvas.Top>225</Canvas.Top>
-		</Image>
-
-		<!-- Второе изображение -->
-		<Image x:Name="img2" Width="100" Source="image.jpg"
-               Opacity="0.4" RenderTransformOrigin="0.5,0.5">
-			<Image.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform ScaleX="1" ScaleY="1"/>
-					<SkewTransform AngleY="5"/>
-				</TransformGroup>
-			</Image.RenderTransform>
-			<Canvas.Left>200</Canvas.Left>
-			<Canvas.Top>280</Canvas.Top>
-		</Image>
-	</Canvas>
+  <Canvas>
+    <!-- Изображение -->
+    <Image x:Name="image"
+           Canvas.Left="50"
+           Canvas.Top="270"
+           Width="120"
+           Source="image.jpg"
+           Opacity="0.3"
+           PointerPressed="Image_PointerPressed">
+      <Image.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleY="22"/>
+        </TransformGroup>
+      </Image.RenderTransform>
+    </Image>
+  </Canvas>
 </Window>

@@ -66,6 +66,3 @@ D:\RPM\LB7\RPM_LABA7\RPM_LABA7\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaS
 D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\RPM_LABA7.csproj.Up2Date
 D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\RPM_LABA7.genruntimeconfig.cache
 D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\ref\RPM_LABA7.dll
-D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\RPM_LABA7.dll
-D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\refint\RPM_LABA7.dll
-D:\RPM\LB7\RPM_LABA7\RPM_LABA7\obj\Debug\net8.0\RPM_LABA7.pdb
