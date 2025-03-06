@@ -4,36 +4,86 @@
         x:Class="RPM_LABA7.Carousel"
         x:DataType="local:Carousel" 
         Title="Carousel"
-        Width="800"
-        Height="600"
+        Width="1500"
+        Height="900"
         Background="#333333">
     
     <Window.Styles>
+        <!-- Базовый стиль -->
         <Style Selector="local|CarouselItem">
             <Setter Property="Opacity" Value="0.3"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="1" ScaleY="1"/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Setter.Value>
-            </Setter>
             <Setter Property="Transitions">
                 <Transitions>
                     <DoubleTransition Property="Opacity" 
-                                    Duration="0:0:1" 
-                                    Easing="CircularEaseOut"/>
-                    <TransformOperationsTransition Property="RenderTransform" 
-                                                 Duration="0:0:1"
-                                                 Easing="CircularEaseOut"/>
+                                    Duration="0:0:1.5" 
+                                    Easing="ExponentialEaseOut"/>
                     <DoubleTransition Property="(Canvas.Left)"
-                                    Duration="0:0:1"
-                                    Easing="CircularEaseOut"/>
+                                    Duration="0:0:1.5"
+                                    Easing="ExponentialEaseOut"/>
                     <DoubleTransition Property="(Canvas.Top)"
-                                    Duration="0:0:1"
-                                    Easing="CircularEaseOut"/>
+                                    Duration="0:0:1.5"
+                                    Easing="ExponentialEaseOut"/>
+                    <TransformOperationsTransition Property="RenderTransform"
+                                                 Duration="0:0:1.5"
+                                                 Easing="ExponentialEaseOut"/>
                 </Transitions>
+            </Setter>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+
+        <!-- Стили для каждого элемента -->
+        <Style Selector="local|CarouselItem.item1">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <SkewTransform AngleX="-30"/>
+                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style Selector="local|CarouselItem.item2">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <SkewTransform AngleX="-15"/>
+                        <ScaleTransform ScaleX="0.85" ScaleY="0.85"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style Selector="local|CarouselItem.item3">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <SkewTransform AngleX="0"/>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style Selector="local|CarouselItem.item4">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <SkewTransform AngleX="15"/>
+                        <ScaleTransform ScaleX="0.85" ScaleY="0.85"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style Selector="local|CarouselItem.item5">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <SkewTransform AngleX="30"/>
+                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+                    </TransformGroup>
+                </Setter.Value>
             </Setter>
         </Style>
 
@@ -43,8 +93,8 @@
             <Setter Property="RenderTransform">
                 <Setter.Value>
                     <TransformGroup>
-                        <ScaleTransform ScaleX="1.8" ScaleY="1.8"/>
-                        <TranslateTransform X="0" Y="0"/>
+                        <SkewTransform AngleX="0"/>
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                     </TransformGroup>
                 </Setter.Value>
             </Setter>
@@ -53,26 +103,31 @@
     </Window.Styles>
 
     <Grid>
-        <Canvas Name="carouselCanvas" Width="800" Height="600">
+        <Canvas Name="carouselCanvas" Width="1500" Height="900">
             <local:CarouselItem x:Name="carouselItem1" 
-                               Canvas.Left="50"
-                               Canvas.Top="450"/>
+                               Classes="item1"
+                               Canvas.Left="100"
+                               Canvas.Top="650"/>
             
             <local:CarouselItem x:Name="carouselItem2"
-                               Canvas.Left="200"
-                               Canvas.Top="470"/>
+                               Classes="item2"
+                               Canvas.Left="325"
+                               Canvas.Top="670"/>
             
             <local:CarouselItem x:Name="carouselItem3"
-                               Canvas.Left="350"
-                               Canvas.Top="480"/>
+                               Classes="item3"
+                               Canvas.Left="550"
+                               Canvas.Top="680"/>
             
             <local:CarouselItem x:Name="carouselItem4"
-                               Canvas.Left="500"
-                               Canvas.Top="470"/>
+                               Classes="item4"
+                               Canvas.Left="775"
+                               Canvas.Top="670"/>
             
             <local:CarouselItem x:Name="carouselItem5"
-                               Canvas.Left="650"
-                               Canvas.Top="450"/>
+                               Classes="item5"
+                               Canvas.Left="1000"
+                               Canvas.Top="650"/>
         </Canvas>
     </Grid>
 </Window>

@@ -15,8 +15,8 @@ namespace RPM_LABA7
         private bool isAnimating = false;
         private List<CarouselItem> carouselItems = new List<CarouselItem>();
         private CarouselItem? activeItem = null;
-        private readonly double[] originalLeftPositions = { 50, 200, 350, 500, 650 };
-        private readonly double[] originalTopPositions = { 450, 470, 480, 470, 450 };
+        private readonly double[] originalLeftPositions = { 100, 325, 550, 775, 1000 };
+        private readonly double[] originalTopPositions = { 650, 670, 680, 670, 650 };
 
         public Carousel()
         {
@@ -61,8 +61,8 @@ namespace RPM_LABA7
                 clickedItem.Classes.Add("active");
                 
                 // Вычисляем центральную позицию
-                double centeredX = (Bounds.Width - (clickedItem.Width * 1.8)) / 2;
-                double centeredY = (Bounds.Height - (clickedItem.Height * 1.8)) / 2;
+                double centeredX = (Bounds.Width - clickedItem.Width) / 2;
+                double centeredY = (Bounds.Height - clickedItem.Height) / 2;
                 
                 Canvas.SetLeft(clickedItem, centeredX);
                 Canvas.SetTop(clickedItem, centeredY);

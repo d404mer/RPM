@@ -1,8 +1,8 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="RPM_LABA7.CarouselItem"
-             Width="200"
-             Height="150">
+             Width="500"
+             Height="250">
     <Border Background="#2255AA" 
             CornerRadius="8" 
             Padding="12"

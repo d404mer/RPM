@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RPM_LABA7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ec450f11938cd742c40157c22b0321998efdda5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f776b158cc86fa83a42e1e91e065b491361acff0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RPM_LABA7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RPM_LABA7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
