@@ -1,25 +1,78 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:RPM_LABA7"
-	x:Class="RPM_LABA7.Carousel"
-	x:DataType="local:Carousel" 
-	Title="Carousel">
-	<Canvas>
-		<!-- Изображение -->
-		<Image x:Name="image"
-               Canvas.Left="50"
-               Canvas.Top="270"
-               Width="120"
-               Source="image.jpg"
-               Opacity="0.3"
-               PointerPressed="Image_PointerPressed">
-			<Image.RenderTransform>
-				<TransformGroup>
-					<!-- Применяем ScaleTransform и SkewTransform без атрибута Name -->
-					<ScaleTransform ScaleX="1" ScaleY="1" />
-					<SkewTransform AngleY="22" />
-				</TransformGroup>
-			</Image.RenderTransform>
-		</Image>
-	</Canvas>
+        x:Class="RPM_LABA7.Carousel"
+        x:DataType="local:Carousel" 
+        Title="Carousel"
+        Width="800"
+        Height="600"
+        Background="#333333">
+    
+    <Window.Styles>
+        <Style Selector="local|CarouselItem">
+            <Setter Property="Opacity" Value="0.3"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <DoubleTransition Property="Opacity" 
+                                    Duration="0:0:1" 
+                                    Easing="CircularEaseOut"/>
+                    <TransformOperationsTransition Property="RenderTransform" 
+                                                 Duration="0:0:1"
+                                                 Easing="CircularEaseOut"/>
+                    <DoubleTransition Property="(Canvas.Left)"
+                                    Duration="0:0:1"
+                                    Easing="CircularEaseOut"/>
+                    <DoubleTransition Property="(Canvas.Top)"
+                                    Duration="0:0:1"
+                                    Easing="CircularEaseOut"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для активного состояния -->
+        <Style Selector="local|CarouselItem.active">
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.8" ScaleY="1.8"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ZIndex" Value="100"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid>
+        <Canvas Name="carouselCanvas" Width="800" Height="600">
+            <local:CarouselItem x:Name="carouselItem1" 
+                               Canvas.Left="50"
+                               Canvas.Top="450"/>
+            
+            <local:CarouselItem x:Name="carouselItem2"
+                               Canvas.Left="200"
+                               Canvas.Top="470"/>
+            
+            <local:CarouselItem x:Name="carouselItem3"
+                               Canvas.Left="350"
+                               Canvas.Top="480"/>
+            
+            <local:CarouselItem x:Name="carouselItem4"
+                               Canvas.Left="500"
+                               Canvas.Top="470"/>
+            
+            <local:CarouselItem x:Name="carouselItem5"
+                               Canvas.Left="650"
+                               Canvas.Top="450"/>
+        </Canvas>
+    </Grid>
 </Window>

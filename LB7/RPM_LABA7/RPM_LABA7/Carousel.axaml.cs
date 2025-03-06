@@ -5,178 +5,86 @@ using Avalonia.Input;
 using Avalonia.Media;
 using Avalonia.Styling;
 using System;
-using System.Threading;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RPM_LABA7
 {
     public partial class Carousel : Window
     {
-        private bool isAnimating = false; // Флаг для предотвращения двойного вызова
-        private Image? imageControl;  // Переименовали в imageControl
+        private bool isAnimating = false;
+        private List<CarouselItem> carouselItems = new List<CarouselItem>();
+        private CarouselItem? activeItem = null;
+        private readonly double[] originalLeftPositions = { 50, 200, 350, 500, 650 };
+        private readonly double[] originalTopPositions = { 450, 470, 480, 470, 450 };
 
         public Carousel()
         {
             InitializeComponent();
-            DataContext = this;
-
-            // Присваиваем imageControl
-            imageControl = this.FindControl<Image>("image");
-
-            if (imageControl != null)
+            
+            // Инициализация списка элементов
+            for (int i = 1; i <= 5; i++)
             {
-                imageControl.PointerPressed += Image_PointerPressed;
+                var item = this.FindControl<CarouselItem>($"carouselItem{i}");
+                if (item != null)
+                {
+                    int index = i - 1; // Сохраняем индекс для замыкания
+                    item.PointerPressed += (s, e) => CarouselItem_PointerPressed(s, e, index);
+                    carouselItems.Add(item);
+                }
             }
         }
 
-        private async void Image_PointerPressed(object? sender, PointerPressedEventArgs e)
+        private async void CarouselItem_PointerPressed(object? sender, PointerPressedEventArgs e, int itemIndex)
         {
-            if (isAnimating) return;  // Предотвращаем повторный вызов
+            if (isAnimating || !(sender is CarouselItem clickedItem)) return;
             isAnimating = true;
 
-            if (imageControl == null)
+            try
             {
-                return;
+                // Если есть активный элемент, возвращаем его на место
+                if (activeItem != null)
+                {
+                    activeItem.Classes.Remove("active");
+                    Canvas.SetLeft(activeItem, originalLeftPositions[carouselItems.IndexOf(activeItem)]);
+                    Canvas.SetTop(activeItem, originalTopPositions[carouselItems.IndexOf(activeItem)]);
+                }
+
+                // Если кликнули по уже активному элементу, просто деактивируем его
+                if (activeItem == clickedItem)
+                {
+                    activeItem = null;
+                    return;
+                }
+
+                // Активируем новый элемент
+                clickedItem.Classes.Add("active");
+                
+                // Вычисляем центральную позицию
+                double centeredX = (Bounds.Width - (clickedItem.Width * 1.8)) / 2;
+                double centeredY = (Bounds.Height - (clickedItem.Height * 1.8)) / 2;
+                
+                Canvas.SetLeft(clickedItem, centeredX);
+                Canvas.SetTop(clickedItem, centeredY);
+
+                activeItem = clickedItem;
+
+                // Ждем 2.5 секунды если это не было снятием активного состояния
+                await Task.Delay(2500);
+
+                // Возвращаем на место только если элемент все еще активен
+                if (activeItem == clickedItem)
+                {
+                    clickedItem.Classes.Remove("active");
+                    Canvas.SetLeft(clickedItem, originalLeftPositions[itemIndex]);
+                    Canvas.SetTop(clickedItem, originalTopPositions[itemIndex]);
+                    activeItem = null;
+                }
             }
-
-            // Создаем трансформацию и привязываем её к RenderTransform
-            var transformGroup = new TransformGroup();
-            var scaleTransform = new ScaleTransform();
-            var skewTransform = new SkewTransform();
-
-            transformGroup.Children.Add(scaleTransform);
-            transformGroup.Children.Add(skewTransform);
-            imageControl.RenderTransform = transformGroup;
-
-            // Анимация для ScaleX
-            var scaleXAnimation = new Animation
+            finally
             {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(ScaleTransform.ScaleXProperty, 1.0) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(ScaleTransform.ScaleXProperty, 2.25) }
-                    }
-                }
-            };
-
-            // Анимация для ScaleY
-            var scaleYAnimation = new Animation
-            {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(ScaleTransform.ScaleYProperty, 1.0) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(ScaleTransform.ScaleYProperty, 2.25) }
-                    }
-                }
-            };
-
-            // Анимация для SkewAngleY
-            var skewAnimation = new Animation
-            {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(SkewTransform.AngleYProperty, 22.0) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(SkewTransform.AngleYProperty, 0.0) }
-                    }
-                }
-            };
-
-            // Запускаем анимации на imageControl
-            await scaleXAnimation.RunAsync(imageControl, CancellationToken.None);
-            await scaleYAnimation.RunAsync(imageControl, CancellationToken.None);
-            await skewAnimation.RunAsync(imageControl, CancellationToken.None);
-
-            // Добавляем анимации для возврата в начальное состояние
-            var reverseScaleXAnimation = new Animation
-            {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(ScaleTransform.ScaleXProperty, 2.25) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(ScaleTransform.ScaleXProperty, 1.0) }
-                    }
-                }
-            };
-
-            var reverseScaleYAnimation = new Animation
-            {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(ScaleTransform.ScaleYProperty, 2.25) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(ScaleTransform.ScaleYProperty, 1.0) }
-                    }
-                }
-            };
-
-            var reverseSkewAnimation = new Animation
-            {
-                Duration = TimeSpan.FromSeconds(1),
-                FillMode = FillMode.Forward,
-                Children =
-                {
-                    new KeyFrame
-                    {
-                        Cue = new Cue(0),
-                        Setters = { new Setter(SkewTransform.AngleYProperty, 0.0) }
-                    },
-                    new KeyFrame
-                    {
-                        Cue = new Cue(1),
-                        Setters = { new Setter(SkewTransform.AngleYProperty, 22.0) }
-                    }
-                }
-            };
-
-            // Запускаем анимации для возврата в начальное положение
-            await reverseScaleXAnimation.RunAsync(imageControl, CancellationToken.None);
-            await reverseScaleYAnimation.RunAsync(imageControl, CancellationToken.None);
-            await reverseSkewAnimation.RunAsync(imageControl, CancellationToken.None);
-
-            isAnimating = false; // Сбрасываем флаг после завершения анимации
+                isAnimating = false;
+            }
         }
     }
 }
