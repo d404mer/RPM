@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\messageboxwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\messageboxwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\messageboxwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\messageboxwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|d:\\cit kai\\rpm\\lb5\\laba5_1\\laba5_1\\laba5_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{224FDFE7-ECE2-48C9-B887-8E0545BF6173}|LABA5_1\\LABA5_1.csproj|solutionrelative:laba5_1\\laba5_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\Window1.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LABA5_1\\Window1.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 464,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MessageBoxWindow.axaml",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MessageBoxWindow.axaml",
+              "RelativeDocumentMoniker": "LABA5_1\\MessageBoxWindow.axaml",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MessageBoxWindow.axaml",
+              "RelativeToolTip": "LABA5_1\\MessageBoxWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-03T17:57:38.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageBoxWindow.axaml.cs",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MessageBoxWindow.axaml.cs",
+              "RelativeDocumentMoniker": "LABA5_1\\MessageBoxWindow.axaml.cs",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MessageBoxWindow.axaml.cs",
+              "RelativeToolTip": "LABA5_1\\MessageBoxWindow.axaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:57:37.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Window1.axaml",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\Window1.axaml",
+              "RelativeDocumentMoniker": "LABA5_1\\Window1.axaml",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\Window1.axaml",
+              "RelativeToolTip": "LABA5_1\\Window1.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-03T17:56:44.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\Program.cs",
+              "RelativeDocumentMoniker": "LABA5_1\\Program.cs",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\Program.cs",
+              "RelativeToolTip": "LABA5_1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:52:10.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LABA5_1.csproj",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
+              "RelativeDocumentMoniker": "LABA5_1\\LABA5_1.csproj",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\LABA5_1.csproj",
+              "RelativeToolTip": "LABA5_1\\LABA5_1.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-03T17:44:47.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "LABA5_1\\MainWindow.axaml",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MainWindow.axaml",
+              "RelativeToolTip": "LABA5_1\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-03T17:02:26.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "LABA5_1\\MainWindow.axaml.cs",
+              "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_1\\LABA5_1\\MainWindow.axaml.cs",
+              "RelativeToolTip": "LABA5_1\\MainWindow.axaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAApwCgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:02:23.747Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
