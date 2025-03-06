@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="open_lock_2textbox.MainWindow"
+        Title="open_lock_2textbox">
+	<Window.Resources>
+		<!--градиент-->
+		<LinearGradientBrush x:Key="gradient" StartPoint="0%,0%" EndPoint="100%,100%">
+			<GradientStop Color="#FFB3E5FC" Offset="0.0" />
+			<GradientStop Color="#FFE1BEE7" Offset="0.5" />
+			<GradientStop Color="Green" Offset="1.0" />
+		</LinearGradientBrush>
+	</Window.Resources>
+
+	<Window.Styles>
+		<Style Selector="TextBox">
+			<Setter Property="Background" Value="{StaticResource gradient}"/>
+			<!--<Setter Property="AcceptReturn" Value="True"/>-->
+			<Setter Property="Watermark" Value="Вводите текст"/>
+			<Setter Property="Height" Value="100"/>
+			
+			<Setter Property="IsEnabled" Value="{Binding #close.IsEnabled}"/>
+			<Setter Property="FontFamily" Value="{Binding #FontSelector.SelectedItem}"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			
+			
+		</Style>
+	</Window.Styles>
+
+	<StackPanel Margin="10" Spacing="10">
+
+		
+
+
+		<!-- Первое многострочное текстовое поле -->
+		<TextBox Name="TextBox1" />
+
+		<!-- Второе многострочное текстовое поле -->
+		<TextBox Name="TextBox2"/>
+
+		<!-- Контейнер для кнопок -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+
+			<ToggleButton x:Name="open"  Content="Открыть"  IsChecked="false" IsEnabled="{Binding !#close.IsEnabled}"/>
+			<Button x:Name="clean" Click="CleanClick" Content="Очистить" />
+			<Button x:Name="close" Content="Закрыть"
+						  IsEnabled="{Binding #open.IsChecked}" 
+					Click="CloseClick"
+					  />
+
+
+			<!--Выбор параметров шрифта-->
+			<ComboBox x:Name="FontSelector">
+				<ComboBox.Items>
+					<FontFamily>Arial</FontFamily>
+					<FontFamily>Times New Roman</FontFamily>
+					<FontFamily>Courier New</FontFamily>
+					<FontFamily>Comic Sans MS</FontFamily>
+				</ComboBox.Items>
+
+
+			</ComboBox>
+
+
+
+		</StackPanel>
+		
+	</StackPanel>
+</Window>
