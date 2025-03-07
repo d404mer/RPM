@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("open_lock_2textbox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79024f31aa2e143248d235875b907b7cb5b8a65a")]
 [assembly: System.Reflection.AssemblyProductAttribute("open_lock_2textbox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("open_lock_2textbox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
