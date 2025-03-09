@@ -8,7 +8,7 @@
 		xmlns:local="clr-namespace:Lab3_2sem_3course;assembly=Lab3_2sem_3course">
 	<Window.Resources>
 		<BlurEffect x:Key="blur" Radius="3"/>
-		<DropShadowEffect x:Key="shadow" BlurRadius="10" Color="Black" Opacity="0.6"/>
+		<DropShadowEffect x:Key="shadow" BlurRadius="20" Color="Black" Opacity="0.6"/>
 	</Window.Resources>
 
 	<Window.Styles>
@@ -25,26 +25,30 @@
 			<Setter Property="Effect">
 				<DropShadowEffect BlurRadius="10" Color="Black" Opacity="0"/>
 			</Setter>
-
-			<Setter Property="RenderTransform" Value="scale(1)"/>
 			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+			<Setter Property="Transitions">
+				<Transitions>
+					<TransformOperationsTransition Property="RenderTransform" Easing="SineEaseIn" Duration="0:0:1"/>
+				</Transitions>
+			</Setter>
+			<Setter Property="RenderTransform" Value="scale(1)"/>
 		</Style>
 
-		
+
 		<Style Selector="StackPanel:pointerover">
-			<Setter Property="ZIndex" Value="99"/>
 			<Setter Property="Margin" Value="25"/>
 			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
-			
-			<Setter Property="RenderTransform" Value="scale(1.15)"/> 
+
 			<Setter Property="Effect" Value="{StaticResource ResourceKey=shadow}"/>
 			<Setter Property="Transitions">
 				<Transitions>
-					<TransformOperationsTransition Property="RenderTransform" Delay="0:0:1" Duration="0:0:0.3"/>
+					<TransformOperationsTransition Property="RenderTransform" Delay="0:0:1" Easing="SineEaseOut" Duration="0:0:2"/>
 				</Transitions>
 			</Setter>
+			<Setter Property="RenderTransform" Value="scale(1.15)"/>
+			<Setter Property="ZIndex" Value="9"/>
 
-		</Style>	
+		</Style>
 
 		<Style Selector="local|ImageWithArrowsUserControl:pointerover">
 			<Setter Property="Width" Value="200"/>
@@ -66,9 +70,6 @@
 			<StackPanel x:Name="third">
 				<local:ImageWithArrowsUserControl/>
 			</StackPanel>
-			<StackPanel x:Name="four">
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
 			<StackPanel>
 				<local:ImageWithArrowsUserControl/>
 			</StackPanel>
@@ -78,37 +79,7 @@
 			<StackPanel>
 				<local:ImageWithArrowsUserControl/>
 			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-			<StackPanel>
-				<local:ImageWithArrowsUserControl/>
-			</StackPanel>
-
 		</WrapPanel>
 	</ScrollViewer>
+
 </Window>
