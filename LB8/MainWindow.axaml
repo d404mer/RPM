@@ -1,0 +1,114 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Lab3_2sem_3course.MainWindow"
+        Title="MainWindow"
+		xmlns:local="clr-namespace:Lab3_2sem_3course;assembly=Lab3_2sem_3course">
+	<Window.Resources>
+		<BlurEffect x:Key="blur" Radius="3"/>
+		<DropShadowEffect x:Key="shadow" BlurRadius="10" Color="Black" Opacity="0.6"/>
+	</Window.Resources>
+
+	<Window.Styles>
+		<Style Selector="local|ImageWithArrowsUserControl">
+			<Setter Property="Width" Value="200"/>
+			<Setter Property="Effect">
+				<BlurEffect Radius="3"/>
+			</Setter>
+			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+		</Style>
+
+		<Style Selector="StackPanel">
+			<Setter Property="Margin" Value="25"/>
+			<Setter Property="Effect">
+				<DropShadowEffect BlurRadius="10" Color="Black" Opacity="0"/>
+			</Setter>
+
+			<Setter Property="RenderTransform" Value="scale(1)"/>
+			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+		</Style>
+
+		
+		<Style Selector="StackPanel:pointerover">
+			<Setter Property="ZIndex" Value="99"/>
+			<Setter Property="Margin" Value="25"/>
+			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+			
+			<Setter Property="RenderTransform" Value="scale(1.15)"/> 
+			<Setter Property="Effect" Value="{StaticResource ResourceKey=shadow}"/>
+			<Setter Property="Transitions">
+				<Transitions>
+					<TransformOperationsTransition Property="RenderTransform" Delay="0:0:1" Duration="0:0:0.3"/>
+				</Transitions>
+			</Setter>
+
+		</Style>	
+
+		<Style Selector="local|ImageWithArrowsUserControl:pointerover">
+			<Setter Property="Width" Value="200"/>
+			<Setter Property="Effect">
+				<BlurEffect Radius="0"/>
+			</Setter>
+		</Style>
+	</Window.Styles>
+
+	<ScrollViewer VerticalScrollBarVisibility="Visible">
+		<WrapPanel Orientation="Horizontal" Name="wrapPanel">
+			<StackPanel x:Name="f">
+				<local:ImageWithArrowsUserControl>
+				</local:ImageWithArrowsUserControl>
+			</StackPanel>
+			<StackPanel x:Name="two">
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel x:Name="third">
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel x:Name="four">
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+			<StackPanel>
+				<local:ImageWithArrowsUserControl/>
+			</StackPanel>
+
+		</WrapPanel>
+	</ScrollViewer>
+</Window>
