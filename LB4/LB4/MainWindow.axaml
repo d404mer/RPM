@@ -4,9 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="LB4.MainWindow"
+		Background="White"
         Title="LB4">
 	<Window.Styles>
-		<!-- Стиль для текстовых полей по умолчанию -->
 		<Style Selector="TextBox">
 			<Setter Property="FontSize" Value="12" />
 			<Setter Property="MinHeight" Value="50" />
@@ -20,7 +20,6 @@
 		</Style>
 
 
-		<!-- Стиль для активного (фокусированного) текстового поля -->
 		<Style Selector="TextBox:focus">
 			<Setter Property="FontSize" Value="20" />
 			<Setter Property="MinHeight" Value="150" />
@@ -37,12 +36,11 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 
-		<!-- Левая часть окна -->
 		<StackPanel Grid.Column="0">
 			<StackPanel.Background>
 				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-					<GradientStop Color="Blue" Offset="0" />
-					<GradientStop Color="LightBlue" Offset="1" />
+					<GradientStop Color="Yellow" Offset="0" />
+					<GradientStop Color="Red" Offset="1" />
 				</LinearGradientBrush>
 			</StackPanel.Background>
 			<TextBox Classes="big" AcceptsReturn="True" Text="Большое поле 1" />
@@ -50,12 +48,11 @@
 			<TextBox AcceptsReturn="True" Text="Маленькое поле 2" />
 		</StackPanel>
 
-		<!-- Правая часть окна -->
 		<StackPanel Grid.Column="1">
 			<StackPanel.Background>
 				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-					<GradientStop Color="Blue" Offset="0" />
-					<GradientStop Color="LightBlue" Offset="1" />
+					<GradientStop Color="Yellow" Offset="0" />
+					<GradientStop Color="Red" Offset="1" />
 				</LinearGradientBrush>
 			</StackPanel.Background>
 			<TextBox Classes="big" AcceptsReturn="True" Text="Большое поле 2" />

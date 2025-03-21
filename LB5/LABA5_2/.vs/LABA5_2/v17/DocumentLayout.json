@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "LABA5_2\\MainWindow.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml",
               "RelativeToolTip": "LABA5_2\\MainWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-04T15:39:22.293Z"
             },
             {
@@ -39,10 +43,20 @@
               "RelativeDocumentMoniker": "LABA5_2\\MainWindow.axaml.cs",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB5\\LABA5_2\\LABA5_2\\MainWindow.axaml.cs",
               "RelativeToolTip": "LABA5_2\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAADwv7AAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T15:39:22.137Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 235,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

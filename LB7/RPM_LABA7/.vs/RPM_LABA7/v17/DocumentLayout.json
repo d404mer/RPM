@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\runner.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\runner.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\carousel.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\carousel.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\pulsar.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\pulsar.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\carousel.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\rpm_laba7.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\pulsar.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\pulsar.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\runner.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\runner.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\runner.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|solutionrelative:rpm_laba7\\runner.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1845D82-249A-4474-B281-911FE3912247}|RPM_LABA7\\RPM_LABA7.csproj|d:\\cit kai\\rpm\\lb7\\rpm_laba7\\rpm_laba7\\pulsar.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,22 +50,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Runner.axaml",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Runner.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\Runner.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Runner.axaml",
               "RelativeToolTip": "RPM_LABA7\\Runner.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T14:17:25.799Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-17T14:17:25.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Runner.axaml.cs",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Runner.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\Runner.axaml.cs",
@@ -77,18 +82,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Carousel.axaml",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Carousel.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\Carousel.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Carousel.axaml",
               "RelativeToolTip": "RPM_LABA7\\Carousel.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T14:17:10.3Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-17T14:17:10.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Carousel.axaml.cs",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Carousel.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\Carousel.axaml.cs",
@@ -96,19 +102,19 @@
               "RelativeToolTip": "RPM_LABA7\\Carousel.axaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T14:17:10.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T14:17:10.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Pulsar.axaml",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Pulsar.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\Pulsar.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\Pulsar.axaml",
               "RelativeToolTip": "RPM_LABA7\\Pulsar.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T14:16:30.464Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-17T14:16:30.464Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RPM_LABA7.csproj",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\RPM_LABA7.csproj",
               "RelativeDocumentMoniker": "RPM_LABA7\\RPM_LABA7.csproj",
@@ -132,7 +138,8 @@
               "RelativeToolTip": "RPM_LABA7\\RPM_LABA7.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-17T13:52:27.008Z"
+              "WhenOpened": "2025-02-17T13:52:27.008Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -142,23 +149,23 @@
               "RelativeDocumentMoniker": "RPM_LABA7\\App.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\App.axaml",
               "RelativeToolTip": "RPM_LABA7\\App.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-17T13:51:40.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml",
               "RelativeDocumentMoniker": "RPM_LABA7\\MainWindow.axaml",
               "ToolTip": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml",
               "RelativeToolTip": "RPM_LABA7\\MainWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-17T13:39:02.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "D:\\CIT KAI\\RPM\\LB7\\RPM_LABA7\\RPM_LABA7\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "RPM_LABA7\\MainWindow.axaml.cs",
@@ -167,6 +174,16 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T13:39:02.002Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 235,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

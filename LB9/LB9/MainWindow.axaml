@@ -32,18 +32,6 @@
 
     <Canvas>
 
-        <!-- <Canvas.Styles>
-            <Style Selector="Button.part:pointerover">
-                <Setter Property="Background" Value="#FF00FFFF" />
-            </Style>
-        </Canvas.Styles>
-
-
-        <Button Canvas.Left="300" Classes="part">
-            vlfkmdv
-        </Button>-->
-
-
         <Button
             Canvas.Left="0"
             Canvas.Top="20"
@@ -58,8 +46,7 @@
 
                 <Canvas Width="634.14001" Height="561.22998">
 
-                    <!--  Unknown tag: sodipodi:namedview  -->
-                    <!--  Unknown tag: metadata  -->
+                  
                     <Canvas>
                         <Canvas.RenderTransform>
                             <TranslateTransform X="0" Y="-491.13214" />

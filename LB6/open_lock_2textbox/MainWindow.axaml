@@ -6,25 +6,21 @@
         x:Class="open_lock_2textbox.MainWindow"
         Title="open_lock_2textbox">
 	<Window.Resources>
-		<!--градиент-->
 		<LinearGradientBrush x:Key="gradient" StartPoint="0%,0%" EndPoint="100%,100%">
-			<GradientStop Color="#FFB3E5FC" Offset="0.0" />
-			<GradientStop Color="#FFE1BEE7" Offset="0.5" />
-			<GradientStop Color="Green" Offset="1.0" />
+			<GradientStop Color="#ff0066" Offset="0.0" />
+			<GradientStop Color="#4500ff" Offset="0.5" />
 		</LinearGradientBrush>
 	</Window.Resources>
 
 	<Window.Styles>
 		<Style Selector="TextBox">
 			<Setter Property="Background" Value="{StaticResource gradient}"/>
-			<!--<Setter Property="AcceptReturn" Value="True"/>-->
-			<Setter Property="Watermark" Value="Вводите текст"/>
+			<Setter Property="Watermark" Value="Вввод"/>
 			<Setter Property="Height" Value="100"/>
-			
+			<Setter Property="Foreground" Value="Black"/>
 			<Setter Property="IsEnabled" Value="{Binding #close.IsEnabled}"/>
 			<Setter Property="FontFamily" Value="{Binding #FontSelector.SelectedItem}"/>
 			<Setter Property="TextWrapping" Value="Wrap"/>
-			
 			
 		</Style>
 	</Window.Styles>
@@ -34,13 +30,10 @@
 		
 
 
-		<!-- Первое многострочное текстовое поле -->
 		<TextBox Name="TextBox1" />
 
-		<!-- Второе многострочное текстовое поле -->
 		<TextBox Name="TextBox2"/>
 
-		<!-- Контейнер для кнопок -->
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
 
 			<ToggleButton x:Name="open"  Content="Открыть"  IsChecked="false" IsEnabled="{Binding !#close.IsEnabled}"/>
@@ -51,7 +44,6 @@
 					  />
 
 
-			<!--Выбор параметров шрифта-->
 			<ComboBox x:Name="FontSelector">
 				<ComboBox.Items>
 					<FontFamily>Arial</FontFamily>
